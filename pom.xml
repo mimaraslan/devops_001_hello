@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mimaraslan</groupId>
     <artifactId>devops_001_hello</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
     <name>devops_001_hello</name>
     <description>devops_001_hello</description>
     <url/>

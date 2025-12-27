@@ -48,9 +48,98 @@ domatesi doğra
 
 ---
 
-###  Docker  Image
+###  Docker  Image 
 
-docker build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.0.jar       --tag  mimaraslan/devops_001_hello:v001     .
+
+### Maven
+
+#### Version 1
+```
+docker   build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.0.jar       --tag  mimaraslan/devops_001_hello:v001     .
+```
+
+
+#### Version 2
+```
+docker   build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.2.jar       --tag  mimaraslan/devops_001_hello:v002     .
+```
+
+#### Version 3
+```
+docker buildx  build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.3.jar       --tag  mimaraslan/devops_001_hello:v003     .
+```
+
+
+####  Container olarak çalıştırma komutları
+```
+docker  run  -it  -d   -p  9091:8080     --name my-app1     mimaraslan/devops_001_hello:v001
+```
+
+http://localhost:9091
+
+
+
+```
+docker  run  -it  -d   -p  9092:8080     --name my-app2     mimaraslan/devops_001_hello:v002
+```
+
+http://localhost:9092
+
+
+
+
+```
+docker  run  -it  -d   -p  9093:8080     --name my-app3     mimaraslan/devops_001_hello:v003
+```
+
+http://localhost:9093
+
+
+
+
+```
+docker push mimaraslan/devops_001_hello:v001
+```
+
+```
+docker push mimaraslan/devops_001_hello:v002
+```
+
+```
+docker push mimaraslan/devops_001_hello:v003
+```
+
+---
+
+## Gradle
+
+### Build v1
+```
+docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.0.jar       --tag  mimaraslan/devops_002_hello:v001     .
+```
+
+### Build v2
+```
+docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.2.jar       --tag  mimaraslan/devops_002_hello:v002     .
+```
+
+### Build v3
+```
+docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.3.jar       --tag  mimaraslan/devops_002_hello:v003     .
+```
+
+
+```
+docker push mimaraslan/devops_002_hello:v001
+```
+
+```
+docker push mimaraslan/devops_002_hello:v002
+```
+
+```
+docker push mimaraslan/devops_002_hello:v003
+```
 
 
 

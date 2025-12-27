@@ -21,7 +21,7 @@ public class DevOpsController {
     // http://localhost:8080
     @GetMapping
     public String devopsHello() {
-        return "Hello DevOps!";
+        return "Hello DevOps! v3 : " + LocalDateTime.now();
     }
 
     // http://localhost:8080/info
