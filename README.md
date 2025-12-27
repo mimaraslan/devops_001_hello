@@ -17,7 +17,7 @@ docker login  -u KULLANICI_ADI    -p  PAROLA
 ### CLI
 
 ```
-KonuştuğumAraç  emir        neyi        :     sürüm
+KonuştuğumYer   emir        araç        :     sürüm
 ---------------------------------------------------------------------
 docker          pull        nginx       :     stable-alpine3.23-perl
 docker          pull        nginx       :     latest
